@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { getProducts } from "../services/api";
+import ProductCard from "../components/ProductCard";
 
-function Shop() {
+function Shop({ onAddToCart }) {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -28,11 +29,11 @@ function Shop() {
     <div>
       <h2>Shop</h2>
       {products.map((product) => (
-        <div key={product.id}>
-          <h3>{product.title}</h3>
-          <img src={product.image} alt={product.title} width="100" />
-          <p>${product.price}</p>
-        </div>
+        <ProductCard
+          key={product.id}
+          product={product}
+          onAddToCart={onAddToCart}
+        />
       ))}
     </div>
   );
