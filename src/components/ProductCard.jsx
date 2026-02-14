@@ -20,18 +20,22 @@ function ProductCard({ product, onAddToCart }) {
   return (
     <div className="product-card">
       <img src={product.image} alt={product.title} />
-      <h3>{product.title}</h3>
-      <p className="price">${product.price}</p>
 
-      <div className="quantity-controls">
-        <button onClick={decrement}>-</button>
-        <span>{quantity}</span>
-        <button onClick={increment}>+</button>
+      <div className="product-card-content">
+        <h3>{product.title}</h3>
+        <p className="price">${product.price}</p>
+        <div className="spacer" />
+
+        <div className="quantity-controls">
+          <button onClick={decrement}>-</button>
+          <span>{quantity}</span>
+          <button onClick={increment}>+</button>
+        </div>
+
+        <button className="add-btn" onClick={handleAdd}>
+          Add to Cart
+        </button>
       </div>
-
-      <button className="add-btn" onClick={handleAdd}>
-        Add to Cart
-      </button>
     </div>
   );
 }
