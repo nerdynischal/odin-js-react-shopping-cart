@@ -66,17 +66,43 @@
 }
 
 .quantity-controls {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.75rem;
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--white);
+  width: fit-content;
+  margin-bottom: 1rem;
 }
 
 .quantity-controls button {
-  height: 28px;
-  min-width: 28px;
+  background: transparent;
+  border: none;
+  width: 36px;
+  height: 36px;
+  font-size: 1rem;
+  color: var(--gray-700);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition);
 }
 
 .quantity-controls button:hover {
-  border-color: var(--gray-300);
+  background: var(--gray-100);
+}
+
+.quantity-controls span {
+  min-width: 40px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--black);
+  border-left: 1px solid var(--gray-200);
+  border-right: 1px solid var(--gray-200);
 }
