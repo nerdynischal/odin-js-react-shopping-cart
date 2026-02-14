@@ -1,3 +1,5 @@
+import "./CartItem.css";
+
 function CartItem({ item, updateQuantity, removeFromCart }) {
   const { id, product, quantity } = item;
 

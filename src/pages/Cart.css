@@ -1,0 +1,11 @@
+.cart-page {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.cart-total {
+  text-align: right;
+  margin-top: 2rem;
+  font-weight: bold;
+}

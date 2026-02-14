@@ -1,0 +1,59 @@
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  padding: 1rem 2rem;
+  height: 64px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-right a {
+  color: white;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  position: relative;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.nav-right a:hover {
+  opacity: 1;
+}
+
+nav {
+  background: #111;
+  padding: 1rem;
+}
+
+nav a {
+  color: white;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.cart-link {
+  position: relative;
+}
+
+.cart-badge {
+  background: crimson;
+  color: white;
+  border-radius: 50%;
+  padding: 3px 8px;
+  font-size: 0.75rem;
+  position: absolute;
+  top: -8px;
+  right: -12px;
+}

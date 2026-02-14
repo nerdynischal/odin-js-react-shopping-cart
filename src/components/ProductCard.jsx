@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./ProductCard.css";
 
 function ProductCard({ product, onAddToCart }) {
   const [quantity, setQuantity] = useState(1);
@@ -13,22 +14,24 @@ function ProductCard({ product, onAddToCart }) {
 
   function handleAdd() {
     onAddToCart(product, quantity);
-    setQuantity(1); // reset after adding
+    setQuantity(1);
   }
 
   return (
-    <div style={{ border: "1px solid gray", padding: "1rem", margin: "1rem" }}>
+    <div className="product-card">
+      <img src={product.image} alt={product.title} />
       <h3>{product.title}</h3>
-      <img src={product.image} alt={product.title} width="100" />
-      <p>${product.price}</p>
+      <p className="price">${product.price}</p>
 
-      <div>
+      <div className="quantity-controls">
         <button onClick={decrement}>-</button>
-        <span style={{ margin: "0 10px" }}>{quantity}</span>
+        <span>{quantity}</span>
         <button onClick={increment}>+</button>
       </div>
 
-      <button onClick={handleAdd}>Add to Cart</button>
+      <button className="add-btn" onClick={handleAdd}>
+        Add to Cart
+      </button>
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import CartItem from "../components/CartItem";
+import "./Cart.css";
 
 function Cart({ cart, updateQuantity, removeFromCart }) {
   const totalPrice = cart.reduce(
@@ -7,11 +8,15 @@ function Cart({ cart, updateQuantity, removeFromCart }) {
   );
 
   if (cart.length === 0) {
-    return <h2>Your cart is empty</h2>;
+    return (
+      <div className="container">
+        <h2>Your Cart is empty</h2>
+      </div>
+    );
   }
 
   return (
-    <div className="cart-page">
+    <div className="cart-page container">
       <h2>Your Cart</h2>
 
       {cart.map((item) => (

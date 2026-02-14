@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getProducts } from "../services/api";
 import ProductCard from "../components/ProductCard";
+import "./Shop.css";
 
 function Shop({ onAddToCart }) {
   const [products, setProducts] = useState([]);
@@ -26,15 +27,17 @@ function Shop({ onAddToCart }) {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div>
+    <div className="shop-page container">
       <h2>Shop</h2>
-      {products.map((product) => (
-        <ProductCard
-          key={product.id}
-          product={product}
-          onAddToCart={onAddToCart}
-        />
-      ))}
+      <div className="product-grid">
+        {products.map((product) => (
+          <ProductCard
+            key={product.id}
+            product={product}
+            onAddToCart={onAddToCart}
+          />
+        ))}
+      </div>
     </div>
   );
 }
