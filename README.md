@@ -3,7 +3,7 @@
 A clean, modern ecommerce storefront built with React and Vite.  
 Designed with a minimal black-and-white UI and structured component architecture.
 
-**Live Demo:** https://your-project-name.vercel.app
+**Live Demo:** https://odin-js-react-shopping-cart.vercel.app/
 
 ---
 
