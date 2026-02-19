@@ -23,7 +23,7 @@ function ProductCard({ product, onAddToCart }) {
 
       <div className="product-card-content">
         <h3>{product.title}</h3>
-        <p className="price">${product.price}</p>
+        <p className="price">${product.price.toFixed(2)}</p>
         <div className="spacer" />
 
         <div className="quantity-controls">

@@ -9,7 +9,7 @@ function CartItem({ item, updateQuantity, removeFromCart }) {
 
       <div className="cart-details">
         <h3>{product.title}</h3>
-        <p>${product.price}</p>
+        <p>${product.price.toFixed(2)}</p>
 
         <div className="cart-controls">
           <button
